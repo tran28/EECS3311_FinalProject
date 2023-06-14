@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane styleClass="transparent" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminDashController">
+   <children>
+      <BorderPane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-radius: 1em;" styleClass="right-bar" stylesheets="@style.css">
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="70.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="1050.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                 <children>
+                                    <Button fx:id="dialinBttn" mnemonicParsing="false" styleClass="simulate-fulfilment" stylesheets="@style.css" text="Simulate Dial-in" textFill="WHITE">
+                                       <font>
+                                          <Font name="Calibri" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="adminManageBttn" mnemonicParsing="false" onAction="#handleLogout" styleClass="search-button" stylesheets="@style.css" text="Admin Management" textFill="WHITE">
+                                       <font>
+                                          <Font name="Calibri" size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="150.0">
+                           <children>
+                              <Button fx:id="logoutBttn" mnemonicParsing="false" onAction="#handleLogout" styleClass="search-button" stylesheets="@style.css" text="Admin Logout" textFill="WHITE">
+                                 <font>
+                                    <Font name="Calibri" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="730.0" prefWidth="1200.0">
+                     <children>
+                        <VBox prefHeight="504.0" prefWidth="400.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="51.0" prefWidth="400.0">
+                                 <children>
+                                    <Label prefHeight="26.0" prefWidth="103.0" stylesheets="@style.css" text="All Movies" textFill="#051937">
+                                       <font>
+                                          <Font name="Calibri" size="22.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="50.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="550.0" prefWidth="400.0">
+                                 <children>
+                                    <ListView fx:id="moviesListView" prefHeight="484.0" prefWidth="300.0" style="-fx-background-radius: 1em;" styleClass="shadow" stylesheets="@style.css" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets left="50.0" right="50.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="62.0" prefWidth="400.0" spacing="20.0">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets left="50.0" right="50.0" />
+                                 </padding>
+                                 <children>
+                                    <Button fx:id="movieEditBttn" mnemonicParsing="false" onAction="#handleEditMovie" styleClass="pay-button" stylesheets="@style.css" text="Edit Info" textFill="WHITE">
+                                       <font>
+                                          <Font name="Calibri" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="newMovieBttn" mnemonicParsing="false" onAction="#handleNewMovie" styleClass="pay-button" stylesheets="@style.css" text="New" textFill="WHITE">
+                                       <font>
+                                          <Font name="Calibri" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="removeMovieBttn" mnemonicParsing="false" onAction="#handleRemoveMovie" styleClass="pay-button" stylesheets="@style.css" text="Remove" textFill="WHITE">
+                                       <font>
+                                          <Font name="Calibri" size="15.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="504.0" prefWidth="400.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="51.0" prefWidth="600.0">
+                                 <children>
+                                    <Label prefHeight="22.0" prefWidth="79.0" stylesheets="@style.css" text="All Users" textFill="#051937">
+                                       <font>
+                                          <Font name="Calibri" size="22.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="50.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="550.0" prefWidth="400.0">
+                                 <children>
+                                    <ListView fx:id="usersListView" prefHeight="454.0" prefWidth="609.0" style="-fx-background-radius: 1em;" styleClass="shadow" stylesheets="@style.css" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets left="50.0" right="50.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="47.0" prefWidth="400.0" spacing="10.0">
+                                 <children>
+                                    <TextField fx:id="txtuserfilter" prefHeight="25.0" prefWidth="237.0" styleClass="search-box" stylesheets="@style.css" />
+                                    <Button fx:id="filterUserBttn" mnemonicParsing="false" onAction="#handleFilterUser" styleClass="add-bttn" stylesheets="@style.css" text="Filter">
+                                       <font>
+                                          <Font name="Calibri" size="15.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets left="50.0" right="50.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="40.0" prefWidth="400.0" spacing="20.0">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets left="50.0" right="50.0" />
+                                 </padding>
+                                 <children>
+                                    <Button fx:id="userEditBttn" mnemonicParsing="false" onAction="#handleUserEdit" styleClass="pay-button" stylesheets="@style.css" text="Edit Info" textFill="WHITE">
+                                       <font>
+                                          <Font name="Calibri" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="newUserBttn" mnemonicParsing="false" onAction="#handleUserNew" styleClass="pay-button" stylesheets="@style.css" text="New" textFill="WHITE">
+                                       <font>
+                                          <Font name="Calibri" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="removeUserBttn" mnemonicParsing="false" onAction="#handleRemoveUser" styleClass="pay-button" stylesheets="@style.css" text="Remove" textFill="WHITE">
+                                       <font>
+                                          <Font name="Calibri" size="15.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="712.0" prefWidth="400.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="51.0" prefWidth="600.0">
+                                 <children>
+                                    <Label prefHeight="26.0" prefWidth="234.0" stylesheets="@style.css" text="All Orders in Warehouse" textFill="#051937">
+                                       <font>
+                                          <Font name="Calibri" size="22.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="50.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="550.0" prefWidth="400.0">
+                                 <children>
+                                    <ListView fx:id="ordersListView" prefHeight="454.0" prefWidth="609.0" style="-fx-background-radius: 1em;" styleClass="shadow" stylesheets="@style.css" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets left="50.0" right="50.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="48.0" prefWidth="400.0" spacing="10.0">
+                                 <children>
+                                    <TextField fx:id="txtorderfilter" prefHeight="25.0" prefWidth="237.0" styleClass="search-box" stylesheets="@style.css" />
+                                    <Button fx:id="filterOrderBttn" mnemonicParsing="false" onAction="#handleFilterOrder" styleClass="add-bttn" stylesheets="@style.css" text="Filter">
+                                       <font>
+                                          <Font name="Calibri" size="15.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets left="50.0" right="50.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="40.0" prefWidth="400.0" spacing="60.0">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets left="50.0" right="50.0" />
+                                 </padding>
+                                 <children>
+                                    <Button fx:id="removeOrderBttn" mnemonicParsing="false" onAction="#handleRemoveOrder" styleClass="pay-button" stylesheets="@style.css" text="Remove" textFill="WHITE">
+                                       <font>
+                                          <Font name="Calibri" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="fulfilBttn" mnemonicParsing="false" styleClass="simulate-fulfilment" stylesheets="@style.css" text="Simulate Fulfilment" textFill="WHITE">
+                                       <font>
+                                          <Font name="Calibri" size="15.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

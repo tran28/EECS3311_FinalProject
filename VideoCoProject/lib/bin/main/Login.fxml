@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+	<children>
+		<AnchorPane layoutX="21.0" layoutY="24.0" prefHeight="753.0" prefWidth="859.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="50.0">
+			<children>
+				<AnchorPane layoutX="20.0" layoutY="25.0" prefHeight="600.0" prefWidth="483.0" style="-fx-background-color: linear-gradient(to top, #051937, #004d7a, #008793, #00bf72, #a8eb12); -fx-background-radius: 1em;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="50.0">
+					<children>
+						<VBox layoutX="44.0" layoutY="397.0" prefHeight="141.0" prefWidth="367.0" AnchorPane.bottomAnchor="62.0" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="44.0" AnchorPane.topAnchor="397.0">
+							<children>
+								<Label prefHeight="64.0" prefWidth="427.0" text="VideoCoSystem" textFill="WHITE">
+									<font>
+										<Font name="Calibri" size="56.0" />
+									</font>
+								</Label>
+								<Label text="Final Project" textFill="WHITE">
+									<font>
+										<Font name="Calibri Light" size="24.0" />
+									</font>
+								</Label>
+								<Label text="EECS3311" textFill="WHITE">
+									<font>
+										<Font name="Calibri" size="24.0" />
+									</font>
+								</Label>
+                        <Label text="Phuong Tran (215513666)" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri Italic" size="22.0" />
+                           </font>
+                        </Label>
+							</children>
+						</VBox>
+					</children>
+				</AnchorPane>
+				<AnchorPane layoutX="478.0" layoutY="50.0" maxWidth="455.0" prefHeight="600.0" prefWidth="455.0" style="-fx-background-color: white; -fx-background-radius: 1em;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="478.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="50.0">
+					<children>
+						<Label layoutX="44.0" layoutY="55.0" text="Sign In" textFill="#282828" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="330.0" AnchorPane.topAnchor="55.0">
+							<font>
+								<Font name="Calibri" size="30.0" />
+							</font>
+						</Label>
+						<TextField fx:id="txtemail" layoutX="44.0" layoutY="244.0" prefHeight="44.0" prefWidth="367.0" promptText="Email" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="44.0">
+							<font>
+								<Font name="Calibri Light" size="14.0" />
+							</font>
+						</TextField>
+						<Button fx:id="bttnUserSignin" layoutX="44.0" layoutY="392.0" mnemonicParsing="false" onAction="#handleUserSignin" prefHeight="40.0" prefWidth="184.0" style="-fx-background-color: #004d7a;" text="Sign In" textFill="WHITE" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="44.0">
+							<font>
+								<Font name="Calibri Light" size="22.0" />
+							</font>
+						</Button>
+						<Button fx:id="bttnAdminSignin" layoutX="320.0" layoutY="547.0" mnemonicParsing="false" onAction="#handleAdminSignin" style="-fx-background-color: #e6e8e6; -fx-background-radius: 1em;" text="Admin Sign In" textFill="#282828" AnchorPane.bottomAnchor="28.0" AnchorPane.rightAnchor="44.0" />
+						<PasswordField fx:id="txtpass" layoutX="44.0" layoutY="300.0" prefHeight="44.0" prefWidth="367.0" promptText="Password" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="44.0">
+							<font>
+								<Font name="Calibri Light" size="14.0" />
+							</font>
+						</PasswordField>
+						<Button fx:id="bttnexit" layoutX="409.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: white;" text="x" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+							<font>
+								<Font name="Calibri Light" size="32.0" />
+							</font>
+						</Button>
+                  <Button fx:id="bttnCreateAccount" layoutX="44.0" layoutY="552.0" mnemonicParsing="false" onAction="#handleCreateAccount" style="-fx-background-color: #e6e8e6; -fx-background-radius: 1em;" text="Don't have an account? Create one" textFill="#282828" />
+					</children>
+				</AnchorPane>
+			</children>
+		</AnchorPane>
+	</children>
+</AnchorPane>

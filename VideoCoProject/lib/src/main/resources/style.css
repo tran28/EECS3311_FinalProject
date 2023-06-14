@@ -1,0 +1,59 @@
+.search-box {
+	-fx-background-color: #FFFFFF;
+	-fx-background-radius: 100.0;
+}
+
+.transparent {
+	-fx-background-color: rgba(0.0, 0.0, 0.0, 0.0);
+}
+
+.search-button {
+	-fx-background-color: #828282;
+	-fx-background-radius: 30.0;
+}
+
+.right-bar {
+	-fx-background-color: #D3D3D3;
+}
+
+.shadow {
+	-fx-effect: dropShadow(three-pass-box, rgba(0.0, 0.0, 0.0, 0.1), 10.0, 0.0, 0.0, 10.0);
+}
+
+.chosen-movie-card {
+	-fx-background-color: #051937;
+	-fx-background-radius: 30.0;
+}
+
+.more-bttn {
+	-fx-background-color: rgba(255.0, 0.0, 0.0, 0.8);
+	-fx-background-radius: 30.0;
+}
+
+.add-bttn {
+	-fx-background-color: #FFFFFF;
+	-fx-background-radius: 100.0;
+}
+
+.pay-button {
+	-fx-background-color: #00a2ed;
+	-fx-background-radius: 100.0;
+}
+
+.simulate-fulfilment {
+	-fx-background-color: #ff5d12;
+	-fx-background-radius: 100.0;
+}
+
+.movie-item {
+	-fx-background-color: #FFFFFF;
+	-fx-background-radius: 30.0;
+}
+
+.right-bar-cart {
+	-fx-background-color: #051937;
+}
+
+.white-pane{
+	-fx-background-color: #ffffff;
+}

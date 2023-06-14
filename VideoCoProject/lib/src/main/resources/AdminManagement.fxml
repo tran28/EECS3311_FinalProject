@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminManagementController">
+	<children>
+      <BorderPane prefHeight="700.0" prefWidth="500.0" style="-fx-background-radius: 1em;" styleClass="white-pane" stylesheets="@style.css">
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="250.0" prefWidth="457.0">
+                     <children>
+                        <Label prefHeight="35.0" prefWidth="262.0" text="Admin Management" textFill="#282828">
+                           <font>
+                              <Font name="Calibri" size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="259.0" prefWidth="500.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="259.0" prefWidth="509.0" spacing="10.0">
+                           <children>
+                              <TextField fx:id="txtname" prefHeight="44.0" prefWidth="367.0" promptText="Name">
+                                 <font>
+                                    <Font name="Calibri Light" size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="txtemail" prefHeight="44.0" prefWidth="367.0" promptText="Email">
+                                 <font>
+                                    <Font name="Calibri Light" size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="txtpass" prefHeight="44.0" prefWidth="367.0" promptText="Password">
+                                 <font>
+                                    <Font name="Calibri Light" size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <padding>
+                              <Insets left="50.0" right="50.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="92.0" prefWidth="500.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="92.0" prefWidth="505.0" spacing="10.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                                 <children>
+                                    <Button fx:id="addBttn" mnemonicParsing="false" onAction="#handleAddAdmin" prefHeight="40.0" prefWidth="554.0" style="-fx-background-color: #004d7a;" text="Add" textFill="WHITE">
+                                       <font>
+                                          <Font name="Calibri Light" size="22.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="removeBttn" mnemonicParsing="false" onAction="#handleRemoveAdmin" prefHeight="40.0" prefWidth="554.0" style="-fx-background-color: #004d7a;" text="Remove" textFill="WHITE">
+                                       <font>
+                                          <Font name="Calibri Light" size="22.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets left="50.0" right="50.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+	</children>
+</AnchorPane>

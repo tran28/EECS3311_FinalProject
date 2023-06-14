@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UserDashController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox prefHeight="800.0" prefWidth="408.0" styleClass="right-bar" stylesheets="@style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="380.0">
+                     <children>
+                        <Label prefHeight="37.0" prefWidth="72.0" text="User" textFill="#787878">
+                           <font>
+                              <Font name="Calibri Bold" size="32.0" />
+                           </font>
+                        </Label>
+                        <Label text="Dashboard" textFill="#787878">
+                           <font>
+                              <Font name="Calibri" size="32.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="53.0" prefWidth="350.0" styleClass="search-box" stylesheets="@style.css">
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </VBox.margin>
+                     <children>
+                        <TextField fx:id="searchField" prefHeight="30.0" prefWidth="223.0" styleClass="transparent" stylesheets="@style.css">
+                           <font>
+                              <Font name="Calibri Light" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                        <MenuButton fx:id="menuBttn" mnemonicParsing="false" prefHeight="31.0" prefWidth="89.0" styleClass="search-button" stylesheets="@style.css" text="Search by" textFill="WHITE">
+                          <items>
+                              <MenuItem fx:id="searchName" mnemonicParsing="false" text="Name" />
+                            <MenuItem fx:id="searchCategory" mnemonicParsing="false" text="Category" />
+                            <MenuItem fx:id="searchAll" mnemonicParsing="false" text="All" />
+                          </items>
+                           <font>
+                              <Font name="Calibri Light" size="12.0" />
+                           </font>
+                        </MenuButton>
+                     </children>
+                     <effect>
+                        <DropShadow height="10.0" offsetY="10.0" radius="2.0" width="0.0">
+                           <color>
+                              <Color opacity="0.10000000149011612" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </HBox>
+                  <Pane prefHeight="32.0" prefWidth="408.0" />
+                  <VBox fx:id="chosenMovieCard" alignment="CENTER" prefHeight="563.0" prefWidth="408.0" styleClass="chosen-movie-card" stylesheets="@style.css">
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" />
+                     </VBox.margin>
+                     <children>
+                        <HBox prefHeight="49.0" prefWidth="308.0">
+                           <children>
+                              <Label fx:id="movieNameLabel" prefHeight="41.0" prefWidth="253.0" text="Free Guy" textFill="WHITE">
+                                 <font>
+                                    <Font name="Calibri" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="moviePriceLabel" prefHeight="41.0" prefWidth="133.0" text="\$7.99" textFill="WHITE">
+                                 <font>
+                                    <Font name="Calibri" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="60.0" prefWidth="300.0">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <ImageView fx:id="movieImage" fitHeight="330.0" fitWidth="240.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/default.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="56.0" prefWidth="308.0">
+                           <children>
+                              <Button fx:id="moreBttn" mnemonicParsing="false" prefHeight="35.0" prefWidth="205.0" styleClass="more-bttn" stylesheets="@style.css" text="MORE INFO" textFill="WHITE">
+                                 <font>
+                                    <Font name="Calibri" size="13.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="56.0" prefWidth="308.0">
+                           <children>
+                              <Button fx:id="addBttn" mnemonicParsing="false" prefHeight="35.0" prefWidth="205.0" styleClass="add-bttn" stylesheets="@style.css" text="ADD TO CART" textFill="#051937">
+                                 <font>
+                                    <Font name="Calibri" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="65.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <Button fx:id="viewAccountBttn" mnemonicParsing="false" onAction="#handleViewAccount" prefHeight="38.0" prefWidth="120.0" styleClass="transparent" stylesheets="@style.css" text="My Account" textFill="#787878">
+                           <font>
+                              <Font name="Calibri" size="15.0" />
+                           </font>
+                        </Button>
+                        <Label prefHeight="17.0" prefWidth="534.0" styleClass="transparent" stylesheets="@style.css" />
+                        <Button fx:id="viewCartBttn" mnemonicParsing="false" onAction="#handleViewCart" prefHeight="38.0" prefWidth="98.0" styleClass="transparent" stylesheets="@style.css" text="View Cart" textFill="#787878">
+                           <font>
+                              <Font name="Calibri" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="bttnsignout" mnemonicParsing="false" onAction="#goBackToLogin" prefHeight="38.0" prefWidth="98.0" styleClass="transparent" stylesheets="@style.css" text="Sign Out" textFill="#787878">
+                           <font>
+                              <Font name="Calibri" size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <ScrollPane fx:id="scroll" prefHeight="600.0" prefWidth="800.0" styleClass="transparent" stylesheets="@style.css">
+                           <content>
+                              <GridPane fx:id="grid">
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
